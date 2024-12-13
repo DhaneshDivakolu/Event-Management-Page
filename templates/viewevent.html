@@ -5,5 +5,28 @@
 {% endblock %}
 
 {% block content %}
-    
+        <div class="view-div">
+            <table border="2px">
+                <thead>
+                    <tr>
+                        <td>event_id</td>
+                        <td>event_name</td>
+                        <td>event_type</td>
+                        <td>event_desc</td>
+                        <td>org_email</td>
+                        <td>org_num</td>
+                        <td>max_seats</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for booking in output %}
+                        <tr>
+                            {% for row in booking %}
+                                <td>{{row}}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
 {% endblock %}

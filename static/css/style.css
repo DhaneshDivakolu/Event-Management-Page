@@ -54,25 +54,56 @@ a{
     width: 100%;
     height: 590px;
 }
-.register-div{
+.register-div, .book-div{
     float: right;
     width: 50%;
     height: 590px;
     background-color: rgb(1, 1, 18);
 }
-.register-div input, .register-div select{
+.register-div input, .register-div select, .book-div input, .book-div select{
     float: left;
     width: 70%;
-    margin: 2% 0% 2% 15%;
+    margin: 3% 0% 1% 15%;
     font-size: 28px;
     background-color: transparent;
     color: aliceblue;
 }
+option{
+    color: black;
+}
 #btn{
     float: left;
     width: 35%;
-    margin: 2% 0% 2% 33%;
+    margin: 3% 0% 2% 33%;
     font-size: 35px;
     border-radius: 20%;
     background-color: green ;
+}
+
+.img-left{
+    float: left;
+    width: 50%;
+    height: 590px;
+    background-color: rgb(1, 1, 18);
+}
+.img-left img{
+    float: left;
+    width: 40%;
+    margin: 3% 3% 3% 6%;
+    height: 250px;
+}
+
+.view-div, .booking-div{
+    float: left;
+    width: 80%;
+    height: 550px;
+    margin:2% 0% 0% 10%;
+    overflow-y: scroll;
+}
+.view-div thead, .booking-div thead{
+    background-color: antiquewhite;
+    font-size: 30px;
+}
+.view-div tbody,.booking-div tbody{
+    font-size: 20px;
 }

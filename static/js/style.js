@@ -33,9 +33,7 @@ for(let l=0; l<dh.length; l++)
             ele.style.fontSize = "";
         })
 }
-// dha.addEventListener("click",function(){
-//     alert('Registered :) ');
-// })
+
 for(let b=0; b<dha.length; b++)
 {
     const ele = dha[b];

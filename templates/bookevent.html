@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block title %}
+    view_events
+{% endblock %}
+
+{% block content %}
+        <div class="img-left">
+            <img src="../static/images/BirthDay.jpeg" alt="no img">
+            <img src="../static/images/Candeellight dinner.jpeg" alt="no img">
+            <img src="../static/images/wedding_event.jpg" alt="no img">
+            <img src="../static/images/events.webp" alt="no img">
+        </div>
+        <div class="book-div">
+            <form action="/book_events" method="post">
+                <input type="number" required placeholder="Event_id" name="event_id">
+                <input type="date" required placeholder="Book Date" name="date">
+                <input type="number" required placeholder="No of seats required" name = "req_seats">
+                <input type="email" required placeholder="contact email" name="c_email">
+                <button id="btn" type="submit" onclick="alert('Successfully Booked')">Book</button>
+            </form>
+        </div>
+{% endblock %}
