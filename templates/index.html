@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {% block title %}
+                Event Management by Dhanesh
+        {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-div">
+        <nav>
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="/register_events"><li>Register Event</li></a>
+                <a href="/view_events"><li>View Events</li></a>
+                <a href="/book_events"><li>Book Event</li></a>
+                <a href="/viewb_events"><li>View Bookings</li></a>
+                <a href="/cancel_events"><li>Cancel Booking</li></a>
+                <a href="/search_events"><li>Search Event</li></a>
+                <a href="/filter_events"><li>Filter Event</li></a>
+            </ul>
+        </nav>
+    </div>
+
+    {% block content %}
+        <div class="body-div">
+                <h1>Event Management System</h1>
+        </div>
+    {% endblock content %}
+
+
+    <div class="footer">
+        <p id="dp">&copy; All rights reserved 2024 | Developed By Dhanesh Divakolu</p>
+    </div>
+    <script src="../static/js/style.js"></script>
+</body>
+</html>

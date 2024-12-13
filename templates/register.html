@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+{% block title %}
+    register_events
+{% endblock %}
+
+{% block content %}
+    <div class="img-div">
+        <img src="../static/images/event-management-service-business-business-service-people-business.png" alt="no image">
+    </div>
+    <div class="register-div">
+        <form action="">
+            <input type="text" required placeholder="event_name" name="event_name">
+            <select name = "type">
+                <option>on-premises</option>
+                <option>virtual</option>
+                <option>In Home</option>
+            </select>
+            <input type="text" required placeholder="event_desc" name="event_desc">
+            <input type="text" required placeholder="org_email" name="org_email">
+            <input type="text" required placeholder="org_num" name="org_num">
+            <input type="text" required placeholder="max_seats" name="max_seats">
+            <button type="submit" id="btn">Register</button>
+        </form>
+    </div>
+{% endblock %}
