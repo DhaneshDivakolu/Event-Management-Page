@@ -93,17 +93,45 @@ option{
     height: 250px;
 }
 
-.view-div, .booking-div{
+.view-div, .booking-div, .data-div{
     float: left;
     width: 80%;
-    height: 550px;
-    margin:2% 0% 0% 10%;
+    height: 510px;
+    margin:1% 0% 0% 10%;
     overflow-y: scroll;
 }
-.view-div thead, .booking-div thead{
+.view-div thead, .booking-div thead, .data-div thead, .fd-div thead{
     background-color: antiquewhite;
     font-size: 30px;
 }
-.view-div tbody,.booking-div tbody{
+.view-div tbody,.booking-div tbody, .data-div tbody, .fd-div tbody{
     font-size: 20px;
+}
+
+#m1{
+    float: inline-end;
+    color: yellow;
+    font-size: 30px;
+    margin: 1%;
+    background-color: red;
+}
+.fd-div{
+    float: left;
+    width: 80%;
+    height: 300px;
+    margin:1% 0% 0% 10%;
+    overflow-y: scroll;
+}
+
+.search-div input, .filter-div input{
+    float: left;
+    width: 60%;
+    margin: 5% 20% 2% 20%;
+    font-size: 30px;
+}
+.search-div button, .filter-div button{
+    float: left;
+    width: 40%;
+    margin: 1% 30% 5% 30%;
+    font-size: 30px;
 }

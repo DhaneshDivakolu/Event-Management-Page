@@ -103,18 +103,37 @@ def bookings_events():
 
 @app.route("/cancel_events", methods = ["GET","POST"])
 def cancel_events():
+    if request.method == "POST":
+        b_id = int(request.form["b_id"])
+        delete_query = """delete from booking where booking_id= %s """
+        values = [b_id]
+        my_cursor.execute(delete_query,values)
+        my_connection.commit()
+        return "Cancelled Successfully"
     return render_template("cancelbooking.html")
 
 @app.route("/filter_events", methods = ["GET","POST"])
 def filter_events():
+    if request.method == "POST":
+        d = request.form["book_date"]
+        read_query = """select * from booking where book_date = %s """
+        Values = [d]
+        my_cursor.execute(read_query,Values)
+        raw = my_cursor.fetchall()
+        print(raw)
+        return render_template("filterevent.html", output = raw)
     return render_template("filterevent.html")
 
 @app.route("/search_events", methods = ["GET","POST"])
 def search_events():
+    if request.method == "POST":
+        b_id = int(request.form["b_id"])
+        search_query = """select * from booking where booking_id= %s """
+        values = [b_id]
+        my_cursor.execute(search_query,values)
+        raw = my_cursor.fetchall()
+        print(raw)
+        return render_template("searchevent.html", output = raw)
     return render_template("searchevent.html")
-
-@app.route("/viewb_events", methods = ["GET","POST"])
-def viewb_events():
-    return render_template("view_booking.html")
 
 app.run(debug=True)

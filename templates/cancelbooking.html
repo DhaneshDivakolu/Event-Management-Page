@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Cancel_Bookings
+{% endblock %}
+
+{% block content %}
+    <div class="cancel-div">
+        <form action="/cancel", method="post">
+            <input type="number" required placeholder="Enter booking id" name="b_id">
+            <button type="submit">Cancel</button>
+        </form>
+    </div>
+{% endblock %}

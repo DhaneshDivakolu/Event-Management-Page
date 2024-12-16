@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Filter
+{% endblock %}
+
+{% block content %}
+    <div class="filter-div">
+        <form action="/filter_events" ,method = "post">
+            <input type="date" placeholder="book_date">
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+    <div class="fd-div">
+        <table border="2px">
+            <thead>
+                <tr>
+                    <td>booking_id</td>
+                    <td>event_id</td>
+                    <td>book_date</td>
+                    <td>req_seats</td>
+                    <td>contact_email</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for booking in output %}
+                    <tr>
+                        {% for row in booking %}
+                            <td>{{row}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
